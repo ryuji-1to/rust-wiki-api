@@ -1,0 +1,16 @@
+[package]
+name = "graphql-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+rocket = "0.5.1"
+async-graphql = { version = "7" }
+async-graphql-rocket = "7"
+sqlx = { version = "0.8", features = [
+  "postgres",
+  "runtime-tokio-rustls",
+  "chrono",
+] }
+chrono = "0.4.40"
