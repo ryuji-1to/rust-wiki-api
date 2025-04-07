@@ -14,3 +14,4 @@ sqlx = { version = "0.8", features = [
   "chrono",
 ] }
 chrono = "0.4.40"
+pulldown-cmark = "0.13.0"
