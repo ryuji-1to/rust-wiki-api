@@ -1,6 +1,6 @@
 create table pages (
   id serial primary key
-  , title varchar(512) not null
+  , title varchar(512) not null unique
   , body text not null
   , create_time timestamp
   , update_time timestamp
