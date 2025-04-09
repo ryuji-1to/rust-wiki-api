@@ -15,3 +15,4 @@ sqlx = { version = "0.8", features = [
 ] }
 chrono = "0.4.40"
 pulldown-cmark = "0.13.0"
+rocket_cors = "0.6.0"

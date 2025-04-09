@@ -48,9 +48,6 @@ impl Page {
     async fn title(&self) -> &str {
         &self.title
     }
-    async fn body(&self) -> &str {
-        &self.body
-    }
     async fn body_html(&self) -> Result<String, async_graphql::Error> {
         let mut options = Options::empty();
         options.insert(Options::ENABLE_STRIKETHROUGH);
@@ -58,5 +55,8 @@ impl Page {
         let mut html_output = String::new();
         pulldown_cmark::html::push_html(&mut html_output, parser);
         Ok(html_output)
+    }
+    async fn create_time(&self) -> String {
+        self.create_time.format("%Y-%m-%d %H:%M:%S").to_string()
     }
 }
